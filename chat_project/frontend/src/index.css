@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --discord-bg-primary: #313338;
+  --discord-bg-secondary: #2B2D31;
+  --discord-bg-tertiary: #1E1F22;
+  --discord-bg-modifier-hover: rgba(255, 255, 255, 0.02);
+  --discord-bg-modifier-active: rgba(255, 255, 255, 0.03);
+  --discord-accent: #5865F2;
+  --discord-accent-hover: #4752C4;
+  --discord-text-normal: #DBDEE1;
+  --discord-text-muted: #949BA4;
+  --discord-text-header: #F2F3F5;
+  --discord-divider: rgba(255,255,255,0.06);
+}
+
+body {
+  font-family: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--discord-bg-primary);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  color: var(--discord-text-normal);
+}
+
+#root {
+  height: 100%;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #1A1B1E;
+  border-radius: 4px;
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: slideIn 0.2s ease-out forwards;
+}
